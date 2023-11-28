@@ -1,0 +1,44 @@
+{
+    "furnitures": [
+        {
+            "id": "f0e1a2b3-c4d5-e6f7-8g9h-0i1j2k3l4m5n",
+            "name": "Silla",
+            "madera": "Pino",
+            "price": 1000,
+            "stock": 5,
+            "description": "Silla de madera",
+            "createdAt": "11/25/2023, 02:41:28 AM",
+            "updatedAt": "11/25/2023, 02:41:28 AM"
+        },
+        {
+            "id": "o6p7q8r9-s0t1u2v3w4x5-y6z7a8b9c0d",
+            "name": "Mesa",
+            "madera": "Roble",
+            "price": 5000,
+            "stock": 10,
+            "description": "Mesa de madera",
+            "createdAt": "11/25/2023, 02:41:28 AM",
+            "updatedAt": "11/25/2023, 02:41:28 AM"
+        },
+        {
+            "id": "e1f2g3h4-i5j6k7l8m9n0-o1p2q3r4s5t",
+            "name": "Sofa",
+            "madera": "Caoba",
+            "price": 3000,
+            "stock": 2,
+            "description": "Sofa de madera",
+            "createdAt": "11/25/2023, 02:41:28 AM",
+            "updatedAt": "11/25/2023, 02:41:28 AM"
+        },
+        {
+            "id": "s0t1u2v3w4x5-i5j6k7l8m9n0-e1f2g3h4",
+            "name": "Cama",
+            "madera": "Barcino",
+            "price": 1200,
+            "stock": 20,
+            "description": "Base de camas de madera",
+            "createdAt": "11/25/2023, 02:41:28 AM",
+            "updatedAt": "11/25/2023, 02:41:28 AM"
+        }
+    ]
+}
