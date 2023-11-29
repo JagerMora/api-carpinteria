@@ -12,13 +12,11 @@ const currentDate = new Date().toLocaleString('en-US', {
 })
 
 const findAll = () => {
-    const allFurnitures = getAllFunrnitures()
-    return allFurnitures
+    return getAllFunrnitures()
 }
 
 const findById = (furnitureId) => {
-    const furniture = getAllFunrnitures().find(furniture => furniture.id === furnitureId)
-    return furniture
+    return getAllFunrnitures().find(furniture => furniture.id === furnitureId)
 }
 
 const createNewFurniture = (furniture) => {
