@@ -11,8 +11,8 @@ app.use(express.json())
  * middleware for sesion token goes here
  */
 
-app.use('/api/v1', furnituresRouter)
-app.use('/api/v1', usersRouter)
+app.use('/api/v1/furniture', furnituresRouter)
+app.use('/api/v1/user', usersRouter)
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)

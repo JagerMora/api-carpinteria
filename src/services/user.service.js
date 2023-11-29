@@ -1,15 +1,7 @@
 /* eslint-disable no-undef */
 const { getAllUsers } = require('../database/User.js')
 const { v4: uuid } = require('uuid')
-
-const currentDate = new Date().toLocaleString('en-US', {
-    month: '2-digit',
-    day: '2-digit',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-})
+const currentDate = require('../utils/utils.js')
 
 const findAll = () => {
     return getAllUsers()
@@ -42,7 +34,6 @@ const updateUserById = (userId, body) => {
     users.splice(oldUser, 1, updateduser)
     return updateduser
 }
-
 
 const deleteUserById = (userId) => {
     const users = getAllUsers()

@@ -1,15 +1,7 @@
 /* eslint-disable no-undef */
 const { getAllFurnitures } = require('../database/Furniture.js')
 const { v4: uuid } = require('uuid')
-
-const currentDate = new Date().toLocaleString('en-US', {
-    month: '2-digit',
-    day: '2-digit',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit'
-})
+const currentDate = require('../utils/utils.js')
 
 const findAll = () => {
     return getAllFurnitures()
@@ -42,7 +34,6 @@ const updateUserById = (furnitureId, body) => {
     furnitures.splice(oldFurniture, 1, updatedfurniture)
     return updatedfurniture
 }
-
 
 const deleteUserById = (furnitureId) => {
     const furnitures = getAllFurnitures()
