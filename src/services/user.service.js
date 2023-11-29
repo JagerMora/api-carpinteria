@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { getAllFunrnitures } = require('../database/Furniture.js')
+const { getAllUsers } = require('../database/User.js')
 const { v4: uuid } = require('uuid')
 
 const currentDate = new Date().toLocaleString('en-US', {
@@ -12,52 +12,52 @@ const currentDate = new Date().toLocaleString('en-US', {
 })
 
 const findAll = () => {
-    return getAllFunrnitures()
+    return getAllUsers()
 }
 
-const findById = (furnitureId) => {
-    return getAllFunrnitures().find(furniture => furniture.id === furnitureId)
+const findById = (userId) => {
+    return getAllUsers().find(user => user.id === userId)
 }
 
-const createNewFurniture = (furniture) => {
-    const newFurniture = {
+const createNewUser = (user) => {
+    const newUser = {
         id: uuid(),
-        ...furniture,
+        ...user,
         createdAt: currentDate,
         updatedAt: currentDate
     }
-    getAllFunrnitures().push(newFurniture)
-    return newFurniture
+    getAllUsers().push(newUser)
+    return newUser
 }
 
-const updateFurnitureById = (furnitureId, body) => {
-    const furnitures = getAllFunrnitures()
-    const oldFurniture = furnitures.find(furniture => furniture.id === furnitureId)
-    const updatedfurniture = {
-        id: furnitureId,
+const updateUserById = (userId, body) => {
+    const users = getAllUsers()
+    const oldUser = users.find(user => user.id === userId)
+    const updateduser = {
+        id: userId,
         ...body,
-        createdAt: oldFurniture.createdAt,
+        createdAt: oldUser.createdAt,
         updatedAt: currentDate
     }
-    furnitures.splice(oldFurniture, 1, updatedfurniture)
-    return updatedfurniture
+    users.splice(oldUser, 1, updateduser)
+    return updateduser
 }
 
 
-const deleteFurnitureById = (furnitureId) => {
-    const furnitures = getAllFunrnitures()
-    const deletedFurnitureIndex = furnitures.findIndex(furniture => furniture.id === furnitureId)
-    if (deletedFurnitureIndex === -1) {
+const deleteUserById = (userId) => {
+    const users = getAllUsers()
+    const deletedUserIndex = users.findIndex(user => user.id === userId)
+    if (deletedUserIndex === -1) {
         return null
     }
-    const deletedFurniture = furnitures.splice(deletedFurnitureIndex, 1)
-    return deletedFurniture
+    const deletedUser = users.splice(deletedUserIndex, 1)
+    return deletedUser
 }
 
 module.exports = {
     findAll,
     findById,
-    createNewFurniture,
-    updateFurnitureById,
-    deleteFurnitureById
+    createNewUser,
+    updateUserById,
+    deleteUserById
 }

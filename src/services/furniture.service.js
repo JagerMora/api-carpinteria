@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { getAllFunrnitures } = require('../database/Furniture.js')
+const { getAllFurnitures } = require('../database/Furniture.js')
 const { v4: uuid } = require('uuid')
 
 const currentDate = new Date().toLocaleString('en-US', {
@@ -12,26 +12,26 @@ const currentDate = new Date().toLocaleString('en-US', {
 })
 
 const findAll = () => {
-    return getAllFunrnitures()
+    return getAllFurnitures()
 }
 
 const findById = (furnitureId) => {
-    return getAllFunrnitures().find(furniture => furniture.id === furnitureId)
+    return getAllFurnitures().find(furniture => furniture.id === furnitureId)
 }
 
-const createNewFurniture = (furniture) => {
+const createNewUser = (furniture) => {
     const newFurniture = {
         id: uuid(),
         ...furniture,
         createdAt: currentDate,
         updatedAt: currentDate
     }
-    getAllFunrnitures().push(newFurniture)
+    getAllFurnitures().push(newFurniture)
     return newFurniture
 }
 
-const updateFurnitureById = (furnitureId, body) => {
-    const furnitures = getAllFunrnitures()
+const updateUserById = (furnitureId, body) => {
+    const furnitures = getAllFurnitures()
     const oldFurniture = furnitures.find(furniture => furniture.id === furnitureId)
     const updatedfurniture = {
         id: furnitureId,
@@ -44,8 +44,8 @@ const updateFurnitureById = (furnitureId, body) => {
 }
 
 
-const deleteFurnitureById = (furnitureId) => {
-    const furnitures = getAllFunrnitures()
+const deleteUserById = (furnitureId) => {
+    const furnitures = getAllFurnitures()
     const deletedFurnitureIndex = furnitures.findIndex(furniture => furniture.id === furnitureId)
     if (deletedFurnitureIndex === -1) {
         return null
@@ -57,7 +57,7 @@ const deleteFurnitureById = (furnitureId) => {
 module.exports = {
     findAll,
     findById,
-    createNewFurniture,
-    updateFurnitureById,
-    deleteFurnitureById
+    createNewUser,
+    updateUserById,
+    deleteUserById
 }

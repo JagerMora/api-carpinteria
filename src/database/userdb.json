@@ -1,0 +1,36 @@
+{
+    "users": [
+        {
+            "id": "1",
+            "name": "John",
+            "lastname": "Doe",
+            "email": "john.doe@example.com",
+            "createdAt": "11/25/2023, 02:41:28 AM",
+            "updatedAt": "11/25/2023, 02:41:28 AM"
+        },
+        {
+            "id": "2",
+            "name": "Jane",
+            "lastname": "Smith",
+            "email": "jane.smith@example.com",
+            "createdAt": "11/25/2023, 02:41:28 AM",
+            "updatedAt": "11/25/2023, 02:41:28 AM"
+        },
+        {
+            "id": "3",
+            "name": "Michael",
+            "lastname": "Johnson",
+            "email": "michael.johnson@example.com",
+            "createdAt": "11/25/2023, 02:41:28 AM",
+            "updatedAt": "11/25/2023, 02:41:28 AM"
+        },
+        {
+            "id": "4",
+            "name": "Emily",
+            "lastname": "Davis",
+            "email": "emily.davis@example.com",
+            "createdAt": "11/25/2023, 02:41:28 AM",
+            "updatedAt": "11/25/2023, 02:41:28 AM"
+        }
+    ]
+}

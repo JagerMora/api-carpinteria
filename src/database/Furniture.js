@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 const DB = require('./db.json')
 
-const getAllFunrnitures = () => {
+const getAllFurnitures = () => {
     return DB.furnitures
 }
 
 module.exports = {
-    getAllFunrnitures
+    getAllFurnitures
 }

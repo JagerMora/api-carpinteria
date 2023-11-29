@@ -2,7 +2,7 @@
 const { findAll, findById, createNewFurniture, updateFurnitureById, deleteFurnitureById } = require('../services/furniture.service.js')
 const HTTP_CODES = require('../utils/httpStatusCodes.js')
 
-const getAllFunrnitures = async (req, res) => {
+const getAllFurnitures = async (req, res) => {
     try {
         const allFurnitures = await findAll()
         res.status(HTTP_CODES.OK).send({ status: 'OK', data: allFurnitures })
@@ -91,7 +91,7 @@ const deleteFurniture = (req, res) => {
 }
 
 module.exports = {
-    getAllFunrnitures,
+    getAllFurnitures,
     getFurnitureById,
     createFurniture,
     updateFurniture,
