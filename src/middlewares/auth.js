@@ -1,3 +1,3 @@
 /**
- * JWT Authentication Middleware
+ * JWT Authentication Middleware for Express
  */
